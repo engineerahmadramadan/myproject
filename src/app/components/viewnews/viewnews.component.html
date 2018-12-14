@@ -1,3 +1,38 @@
+
+
 <h1>
-  newssssssssssssss
+  Ahmed ramadan News
 </h1>
+<hr>
+<div class='row'>
+
+  <!-- <div class="col-lg-4">
+    <img src='https://ichef.bbci.co.uk/news/660/cpsprodpb/17774/production/_100161169_hi044528065.jpg'/>
+
+    <h1>{{item.title}}</h1>
+    <p>
+      {{item.discription}}
+    </p>
+</div> -->
+<div class="card-columns">
+<div class="card bg-success text-white" style="width: 18rem;" *ngFor="let item of news">
+  <img class="card-img-top" src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17774/production/_100161169_hi044528065.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{item.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{item.discription}}</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link" routerLink="/detailsview/{{item.id}}"  >More details</a>
+  </div>
+</div>
+</div>
+</div>
+<style>
+.card {display:inline-block;
+margin-top: 10px;
+width: 30%;
+}
+</style>
+
+
+
+

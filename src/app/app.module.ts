@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatchesService } from './services/matches.service';
 import { NewsService } from './services/news.service';
-import {HttpModule} from '@angular/http';
+//import {HttpModule} from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { ViewmatchesComponent } from './components/viewmatches/viewmatches.component';
@@ -24,11 +25,12 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SettingComponent } from './components/setting/setting.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { AddnewsComponent } from './components/addnews/addnews.component';
 
 // import {map} from 'rxjs/operators';
 // import {Observable, of, from } from 'rxjs';
 
-
+//DetailsviewComponent
 const appRoutes: Routes = [
   {path: 'home', component: ViewmatchesComponent},
   {path: 'matches', component: ViewmatchesComponent},
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'setting', component: SettingComponent},
-  {path: 'pageerror', component: PagenotfoundComponent}
+  {path: 'pageerror', component: PagenotfoundComponent},
+  {path: 'detailsview/:id', component: DetailsviewComponent},
 ]
 
 @NgModule({
@@ -61,18 +64,20 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
     SettingComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    AddnewsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    HttpModule,
-    FormsModule],
+    FormsModule,
+    HttpClientModule],
   providers: [
     NewsService,
     MatchesService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+ }

@@ -25,7 +25,9 @@
     "core-js": "^2.5.4",
     "firebase": "^5.7.0",
     "jquery": "^3.3.1",
+    "rx-observable-update": "^1.0.0",
     "rxjs": "^6.3.3",
+    "rxjs-compat": "^6.3.3",
     "tether": "^1.4.5",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
